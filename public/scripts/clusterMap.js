@@ -3,7 +3,7 @@ mapboxgl.accessToken = mbxToken;
 const map = new mapboxgl.Map({
     container: 'cluster-map',
     style: 'mapbox://styles/mapbox/dark-v10',
-    center: [78.9629, 21.5937],
+    center: [78.9629, 21.2937],
     zoom: 3.25
 });
 
