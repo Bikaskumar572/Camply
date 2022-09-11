@@ -17,8 +17,8 @@ const cities = require('./cities.js');
 // console.log(cities);
 
 // connect mongoose to database
-// const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
-const dbUrl = "";
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
+// const dbUrl = "";
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -35,6 +35,7 @@ const seedDB = async () => {
     // delete existing data
     await Campground.deleteMany({
         author: {
+            // $in: '631cc77af9a8643e680fc3a6' // local mongo
             $in: '631055eb42fd145df0961908' // mongo atlas
         }
     });
@@ -65,6 +66,7 @@ const seedDB = async () => {
 
         let camp = new Campground({
             name: `${seeder(descriptors)} ${seeder(places)}`,
+            // author: '631cc77af9a8643e680fc3a6', // local mongo
             author: '631055eb42fd145df0961908',  // mongo atlas
             price: price,
             description: "With more than 7,000 islands consisting of rice paddies, volcanos, hills, mountains, cliffs, world-class surf spots, and endemic wildlife, the Philippines is one of the most dazzling and diverse countries in all of Asia. Not to mention, it’s home to some of the world’s best beaches, too. The country is a biodiversity hotspot, having the world’s highest endemism rate for bird species, and one of the highest for mammals and flora. (travelope.in)",
