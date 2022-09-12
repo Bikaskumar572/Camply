@@ -1,5 +1,5 @@
 # Camply
-Camply is inspired from yelp.com. YelpCamp is a web Application in which users can find campgrounds and review them. Users can also add their own campgrounds. A map has also 
+Camply is inspired from yelp.com. Camply is a web Application in which users can find campgrounds and review them. Users can also add their own campgrounds. A map has also 
 been displayed for better searching. When a user enters a location, the map finds and shows it automatically. Implemented a fuzzy search feature using MongoDB Atlas search.
 ## Deployment
 To see my Web Application please do visit https://bikas-camply.herokuapp.com/
